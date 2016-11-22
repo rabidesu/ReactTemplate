@@ -14,18 +14,18 @@ module.exports = {
                 loader: "babel",
                 query:
                 {
-                    presets:['react', 'es2015']
+                    presets:['react', 'es2015', 'stage-0']
                 },
                 exclude: [/node_modules/, /public/]
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader!autoprefixer-loader",
+                loader: "style-loader!css-loader!postcss-loader",
                 exclude: [/node_modules/, /public/]
             },
             {
                 test: /\.less$/,
-                loader: "style-loader!css-loader!autoprefixer-loader!less",
+                loader: "style-loader!css-loader!postcss-loader!less",
                 exclude: [/node_modules/, /public/]
             },
             {
